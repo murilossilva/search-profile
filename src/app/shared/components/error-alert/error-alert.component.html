@@ -1,0 +1,22 @@
+<aside *ngIf="showAlert" role="alert">
+    <div class="alert-container">
+        <div class="flex-content">
+            <fa-icon [icon]="(isConnectionError$ | async) ? wifiIcon : exclamationCircleIcon" 
+            class="exclamation-circle__icon ml-4 -large-mid"></fa-icon>
+    
+            <p *ngIf="(isConnectionError$ | async)" class="alert-text">
+                Falha na conexão. Verifique sua internet.
+            </p>
+
+            <p *ngIf="(isUserInexistentError$ | async)" class="alert-text">
+                Usuário inexistente. Verifique e tente novamente.
+            </p>
+
+            <p *ngIf="(isError$ | async)" class="alert-text">
+                Erro na consulta. Tente novamente mais tarde.
+            </p>
+        </div>
+
+        <fa-icon [icon]="xMarkIcon" class="x-mark__icon mr-4 -large-mid" (click)="closeAlert()"></fa-icon>
+    </div>
+</aside>

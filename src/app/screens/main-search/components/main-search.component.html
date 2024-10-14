@@ -1,0 +1,48 @@
+<ui-error-alert [showAlert]="(isError$ | async) || (isUserInexistentError$ | async) || (isConnectionError$ | async)"></ui-error-alert>
+
+<section class="flex-items centralize-items">
+  <h1 class="text-title-1 mb-6">Github</h1>
+
+  <form
+    [formGroup]="searchForm"
+    class="search-form"
+    autocomplete="off"
+  >
+    <div class="input-wrapper"
+    >
+      <fa-icon [icon]="searchIcon"></fa-icon>
+
+      <input
+        class="search-input mr-3"
+        type="text"
+        formControlName="searchProfileForm"
+        (input)="validateSearchField()"
+        (keyup.enter)="searchProfile()"
+        placeholder="Insira o nome de um usuário"
+      />
+
+      <ui-loading *ngIf="isLoading$ | async"></ui-loading>
+    </div>
+
+    <legend class="tooltip-rules__legend -min-mid mt-1 ml-4">Não atende formato utilizado pelo Github</legend>
+
+    <div class="username-rules__tooltip p-3">
+      <span>
+        <p aria-label="Máximo de 39 caracteres" class="tooltip-rules__text -min-mid no-margin">Máx. 39 caracteres</p>
+        <p class="tooltip-rules__text -min-mid">Não começar com hífen</p>
+        <p class="tooltip-rules__text -min-mid">Não terminar com hífen</p>
+        <p class="tooltip-rules__text -min-mid">Não ter dois hífens consecutivos</p>
+        <p class="tooltip-rules__text -min-mid no-margin">Não ter caracteres especiais</p>
+      </span>
+    </div>
+
+  </form>
+
+
+
+  <div class="mt-8">
+    <button class="search-btn -mid-min" type="submit" (click)="searchProfile()">
+      Pesquisar Perfil
+    </button>
+  </div>
+</section>

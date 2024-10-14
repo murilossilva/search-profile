@@ -1,0 +1,21 @@
+<ul class="repo-card__list">
+  <li>
+    <div class="repo-card__content p-4">
+      <a class="-mid-min repo-card__link -bold" href="{{ repoData?.html_url }}">
+        {{ repoData?.name }}
+      </a>
+      <p class="-min-mid repo-card__description">
+        {{ repoData?.description }}
+      </p>
+      <div>
+        <span class="repo-card__number-stars -min-mid -bold"
+          ><fa-icon
+            [icon]="starIcon"
+            class="-mid-min repo-card__star"
+          ></fa-icon>
+          {{ repoData?.stargazers_count }}</span
+        >
+      </div>
+    </div>
+  </li>
+</ul>
