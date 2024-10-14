@@ -1,0 +1,20 @@
+@use 'variables';
+@import 'node_modules/normalize.scss/normalize.scss' ;
+@import './structure.scss';
+@import './typography.scss';
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url("./assets/fonts/ProductSans-Regular.woff");
+}
+
+html, body {
+    background-color: var(--black-background);
+}
+
+.centralize-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,101 @@
+.flex-items {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.search-form {
+    width: 30%;
+    min-width: 540px
+}
+
+.input-wrapper {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem;
+    border: 1px solid var(--grey-text);
+    padding: 0.75rem;
+    transition: .3s;
+}
+
+.input-wrapper fa-icon {
+    color: var(--grey-icon);
+    padding: 0 0.25rem;
+    background-color: transparent;
+}
+
+.input-wrapper .search-input {
+    background-color: transparent;
+    border: none;
+    color: var(--white-element);
+    width: 100%;
+    margin-left: 0.825rem;
+}
+
+.input-wrapper .search-input:focus-visible {
+    outline: none;
+}
+
+.input-wrapper:hover,
+.input-wrapper:has(> .search-input:focus-visible) {
+    border: 1px solid var(--grey-btn);
+    background-color: var(--grey-btn);
+    box-shadow: 0 2px 8px 1px rgba(0,0,0,.14);
+    transition: .3s;
+}
+
+.search-btn {
+    padding: 0.55rem 1rem;
+    background-color: var(--grey-btn);
+    color: var(--white-element);
+    border: 1px solid var(--grey-btn);
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.search-btn:hover {
+    border: 1px solid var(--grey-text);
+    transition: .3s;
+}
+
+.search-form.ng-dirty.ng-invalid .input-wrapper {
+    border: 1px solid var(--red-input);
+}
+
+.username-rules__tooltip {
+    display: none;
+    position: absolute;
+    right: 25%;
+    border: 1px solid var(--red-input);
+    border-radius: 10px;
+    background-color: var(--red-background-alert);
+}
+
+.tooltip-rules__text {
+    color: var(--red-input);
+}
+
+.tooltip-rules__legend {
+    display: none;
+}
+
+.search-form.ng-dirty.ng-invalid .tooltip-rules__legend {
+    position: absolute;
+    color: var(--red-input);
+    display: initial;
+}
+
+.tooltip-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.tooltip-box {
+    position: absolute;
+    border: 1px solid var(--grey-btn);
+}
+
+.search-form.ng-dirty.ng-invalid .input-wrapper .tooltip-icon {
+    display: initial;
+}

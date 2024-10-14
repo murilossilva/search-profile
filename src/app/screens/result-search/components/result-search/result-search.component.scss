@@ -1,0 +1,67 @@
+.flex-content {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-avatar__image {
+    border-radius: 50%;
+    width: 100%;
+    max-height: 296px;
+    border: 1px solid var(--grey-text);
+}
+
+.profile-infos__section {
+    width: 17.5%;
+}
+
+.profile-name__text,
+.repo-filter-list__icon,
+.profile-bio__text,
+.profile-follow__text span,
+.repo-filter__order-box {
+    color: var(--white-element);
+}
+
+.profile-username__text,
+.repo-filter__order-box p:hover .repo-filter-list__icon,
+.repo-filter__order-box p:hover,
+.repo-filter__icon,
+.profile-follow__text {
+    color: var(--grey-text);
+}
+
+.profile-bio__text {
+    text-align: left;
+}
+
+.profile-follow__container {
+    display: flex;
+}
+
+.repo-cards__container {
+    width: 60%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+}
+
+.repo-filter__icon {
+    cursor: pointer;
+}
+
+.repo-filter__order-box {
+    border: 1px solid var(--grey-text);
+    border-radius: 4px;
+}
+
+.repo-filter__order-box p {
+    border-bottom: 1px solid var(--grey-text);
+    transition: .3s;
+}
+
+.repo-filter__order-box p:hover{
+    cursor: pointer;
+    background-color: var(--white-element);
+    border-left: 3px solid var(--green-star);
+    transition: .3s;
+}

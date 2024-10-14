@@ -1,0 +1,55 @@
+<div class="flex-content mt-10">
+  <section class="profile-infos__section">
+    <img
+      src="{{ userDetails?.avatar_url }}"
+      alt="Imagem de perfil do usuário {{ userDetails?.name }}"
+      class="profile-avatar__image"
+    />
+  
+    <div class="mt-4">
+      <h1 class="profile-name__text -large -semi-bold no-margin">
+        {{ userDetails?.name }}
+      </h1>
+  
+      <h2 class="profile-username__text -large-min -unbold no-margin">
+        {{ userDetails?.login }}
+      </h2>
+    </div>
+  
+    <div class="mt-4">
+      <p class="profile-bio__text">
+        {{ userDetails?.bio }}
+      </p>
+    </div>
+  
+    <div class="mt-4 profile-follow__container">
+      <p class="profile-follow__text -mid-min">
+        <fa-icon [icon]="followIcon" class="-mid-min mr-1"></fa-icon>
+        <span class="-bold">{{ userDetails?.followers }}</span> followers
+        <span class="-bold">• {{ userDetails?.following }}</span>
+        following
+      </p>
+    </div>
+  
+    <p class="profile-follow__text -mid-min no-margin">
+      <fa-icon [icon]="starIcon" class="-mid-min mr-1"></fa-icon>
+      <span class="-bold">{{ numberOfStars }}</span> stars
+    </p>
+  
+    <p class="profile-follow__text -mid-min">
+      <fa-icon [icon]="locationIcon" class="-mid-min mr-1"></fa-icon>
+      <span> {{ userDetails?.location }} </span>
+    </p>
+  </section>
+  
+  <div class="repo-cards__container mr-10">
+    <ui-repo-card *ngFor="let repository of repositories" [repoData]="repository"></ui-repo-card>
+  </div>
+
+  <div class="mt-4">
+    <ui-filter [repoData]="repositories"></ui-filter>
+  </div>
+</div>
+
+
+

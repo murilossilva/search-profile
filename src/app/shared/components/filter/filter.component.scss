@@ -1,0 +1,33 @@
+.repo-filter-list__icon,
+.repo-filter__order-box {
+    color: var(--white-element);
+}
+
+.repo-filter__order-box p:hover .repo-filter-list__icon,
+.repo-filter__order-box p:hover,
+.repo-filter__icon {
+    color: var(--grey-text);
+}
+
+.repo-filter__icon {
+    cursor: pointer;
+}
+
+.repo-filter__order-box {
+    position: absolute;
+    right: 1%;
+    border: 1px solid var(--grey-text);
+    border-radius: 4px;
+}
+
+.repo-filter__order-box p {
+    border-bottom: 1px solid var(--grey-text);
+    transition: .3s;
+}
+
+.repo-filter__order-box p:hover{
+    cursor: pointer;
+    background-color: var(--white-element);
+    border-left: 3px solid var(--green-star);
+    transition: .3s;
+}

@@ -1,0 +1,35 @@
+.repo-card__list {
+    list-style: none;
+    height: calc(100% - 2rem);
+}
+
+.repo-card__list li {
+    height: 100%;
+}
+
+.repo-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--grey-text);
+    border-radius: 0.5rem;
+    min-height: 64px;
+    height: calc(100% - 2rem);
+}
+
+.repo-card__link {
+    text-decoration: none;
+    color: var(--link-text);
+}
+
+.repo-card__description {
+    color: var(--grey-text);
+}
+
+.repo-card__star {
+    color: var(--green-star);
+}
+
+.repo-card__number-stars {
+    color: var(--white-element);
+}

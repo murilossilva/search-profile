@@ -1,0 +1,8 @@
+<fa-icon [icon]="filterIcon" class="-large repo-filter__icon" (click)="showFilters()"></fa-icon>
+
+<div *ngIf="hasFiltersToShow" class="repo-filter__order-box mt-1">
+  <p class="no-margin -mid-min p-3" (click)="orderByStarAsc()"><fa-icon [icon]="starIcon" class="repo-filter-list__icon mr-1"></fa-icon>Mais estrelas</p>
+  <p class="no-margin -mid-min p-3" (click)="orderByStarDesc()"><fa-icon [icon]="starHalfIcon" class="repo-filter-list__icon mr-1"></fa-icon>Menos estrelas</p>
+  <p class="no-margin -mid-min p-3" (click)="orderByNameAsc()"><fa-icon [icon]="alphaAsc" class="repo-filter-list__icon mr-1"></fa-icon>Alfabética crescente</p>
+  <p class="no-margin -mid-min p-3" (click)="orderByNameDesc()"><fa-icon [icon]="alphaDesc" class="repo-filter-list__icon mr-1"></fa-icon>Alfabética decrescente</p>
+</div>
