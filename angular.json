@@ -154,6 +154,7 @@
       "@cypress/schematic",
       "@cypress/schematic",
       "@cypress/schematic",
+      "@cypress/schematic",
       "@schematics/angular"
     ]
   }

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { IRepoDetails } from 'src/app/core/interfaces/repo-details.interface';
-import { SearchReposService } from 'src/app/core/services/search-repos/search-repos.service';
 
 @Component({
   selector: 'ui-repo-card',

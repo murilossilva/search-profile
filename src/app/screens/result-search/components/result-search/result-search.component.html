@@ -1,7 +1,7 @@
 <div class="flex-content mt-10">
   <section class="profile-infos__section">
     <img
-      src="{{ userDetails?.avatar_url }}"
+      src="{{ ( isConnectionError$ | async ) ? '../../../../../assets/img/no-connection.png' : userDetails?.avatar_url }}"
       alt="Imagem de perfil do usuário {{ userDetails?.name }}"
       class="profile-avatar__image"
     />

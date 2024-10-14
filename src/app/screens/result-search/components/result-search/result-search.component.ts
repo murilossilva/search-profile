@@ -3,6 +3,7 @@ import { RepoData } from 'src/app/core/models/repo-data.model';
 import { UserData } from 'src/app/core/models/user-data.model';
 import { SearchReposService } from 'src/app/core/services/search-repos/search-repos.service';
 import { faLocationDot, faStar, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'ui-main-search',
@@ -17,6 +18,12 @@ export class ResultSearchComponent implements OnInit {
   private repoData: RepoData;
   private userData: UserData;
 
+  isConnectionError$ = this._searchRepositoriesService.connectionError$.pipe(
+    map((connectionError) => {
+      return connectionError;
+    })
+  );
+
   get numberOfStars() {
     return this.repoData.repoStars;
   }
@@ -30,12 +37,12 @@ export class ResultSearchComponent implements OnInit {
   }
 
   constructor(
-    private _searchReposService: SearchReposService
+    private _searchRepositoriesService: SearchReposService
   ) {}
 
   ngOnInit(): void {
-    this.repoData = this._searchReposService.repoData;
-    this.userData = this._searchReposService.userData;
+    this.repoData = this._searchRepositoriesService.repoData;
+    this.userData = this._searchRepositoriesService.userData;
   }
   
 }

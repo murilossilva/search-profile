@@ -15,8 +15,12 @@ export class RepoData {
     setRepoData(repoDetails: IRepoDetails[]) {
         this._repoDetails = repoDetails
         this._repoStars = 0;
+
+        if(repoDetails.length > 0) {
+            this.setRepoDetailsInStorage(repoDetails);
+        }
+
         this.countRepoStars();
-        this.setRepoDetailsInStorage(repoDetails);
     }
 
     countRepoStars() {
